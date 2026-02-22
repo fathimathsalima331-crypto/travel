@@ -23,42 +23,65 @@ body {
     transform: scaleY(1.02);
 }
 
+/* ================= NAVBAR ================= */
+
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
-    margin-top: 20px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 60px;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
+
+/* LOGO */
 .logo {
-
-    font-family: "poppins", sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-right: auto;
-    margin-left: 30px;
-    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     color: white;
-
-
 }
 
+
+/* LINKS CONTAINER */
 nav a {
-    color: white;
-    list-style: none;
     text-decoration: none;
-    margin-left: 3px;
-    font-family: "poppins", sans-serif;
-    font-size: 1rem;
-    margin-top: 20px;
-    padding: 8px 20px;
-    margin-bottom: 20px;
+    color: white;
+    margin-left: 28px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+/* smooth underline hover (luxury style) */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #7bd389;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: rgba(207, 207, 207, 0.5);
-    border-radius: 10px;
-    color: rgb(116, 223, 97);
-    /* transition: all 0.1s ease; */
+    color: #7bd389;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .banner {
@@ -115,159 +138,229 @@ p {
 
 }
 
-/* about */
-body {
-
-    box-sizing: border-box;
-}
-
+/* about *//* ================= SMALL FEATURE BOXES ================= */
 .about {
-    color: rgb(248, 248, 248);
-    background-image: url('self-portrait-forest-scaled.jpg');
-    padding: 3px 5px;
+    background: linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url('self-portrait-forest-scaled.jpg') center/cover no-repeat;
+
+    padding: 90px 20px 50px;
 }
 
-.logo {
-    margin-bottom: 20px;
-}
 
-.about nav a {
-    color: white;
-    margin-bottom: 20px;
 
-}
-
-.about nav a:hover {
-    color: rgb(114, 215, 114);
-    background-color: rgba(131, 141, 126, 0.851);
-}
+/* =====================================================
+   ABOUT CONTENT CARD
+===================================================== */
 
 .about-content {
-    color: black;
-    background-color: rgb(255, 255, 255);
-    margin-top: 70px;
+    background: white;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 50px;
+
+    border-radius: 24px;
+    text-align: center;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+
+    animation: fadeUp 0.8s ease;
 }
 
 .about-content h2 {
-    color: black;
-    margin-left: 50px;
-    font-size: 2rem;
-    font-family: "poppins", sans-serif;
-    margin-left: 50px;
+    font-size: 2.4rem;
+    margin-bottom: 18px;
+    color: #111;
 }
 
 .about-content p {
-    margin-left: 50px;
-    font-family: "poppins", sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.1;
-    overlay: none;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
 
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
 .logoo {
-    margin-left: 40px;
     margin-top: 20px;
 }
 
 .logoo img {
-    height: 40px;
-    width: 50px;
+    width: 32px;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.logoo img:hover {
+    transform: scale(1.2) translateY(-3px);
+}
+
+
+
+/* =====================================================
+   FEATURE SMALL BOXES (ONE LINE)
+===================================================== */
 
 .box {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 60px 60px 60px 0;
-    gap: 30px;
-    position: relative;
-    left: 5px;
-    bottom: 370px;
-    height: 100px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    max-width: 1100px;
+    margin: 60px auto;
 }
 
+
+/* compact cards */
 .box-content {
-    background-color: rgb(140, 181, 121);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    padding: 25px;
-    width: 500px;
-    box-shadow: 0 4px 10px rgba(165, 198, 170, 0.5);
-    transition: tranform 0.3s;
-    box-shadow: 0.3s ease;
+    width: 240px;
+
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
 .box-content:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 4px 10px rgba(6, 74, 41, 0.5);
-}
-
-.box-content h2 {
-    color: #fff;
-    margin-bottom: 10px;
-    font-family: "poppins", sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.box-content p {
-    font-size: 1rem;
-    margin-top: 10px;
-    line-height: 1.3;
-    font-family: "poppins", sans-serif;
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.15);
 }
 
 .box-content img {
-    height: 120px;
-    width: 120px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-right: 25px;
-    overlay: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    margin-bottom: 10px;
 }
 
-.text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.box-content h2 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #222;
 }
+
+.box-content p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+
+
+/* =====================================================
+   STATS SMALL BOXES (ONE LINE)
+===================================================== */
 
 .icon {
-    color: black;
     display: flex;
-    margin-right: 1100px;
-    gap: 40px;
-    position: relative;
-    bottom: 210px;
-    position: relative;
-    right: 2px;
-    left: 200px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 
+    margin: 40px auto 60px;
+}
+
+.icon-content {
+    background: white;
+    padding: 16px 22px;
+
+    border-radius: 14px;
+    text-align: center;
+    min-width: 120px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.icon-content:hover {
+    transform: scale(1.08);
 }
 
 .icon-content img {
-    height: 40px;
-    width: 40px;
-    object-fit: cover;
-    position: relative;
-    left: 30px;
+    width: 28px;
+    margin-bottom: 6px;
 }
+
 .icon-content h2 {
-    text-align: center;
-    font-family: "poppins", sans-serif;
-    margin-top: 10px;
-    font-size: large;
-    font-weight: bold;
+    font-size: 1rem;
+    color: #222;
 }
 
 .icon-content p {
-    text-align: center;
-    font-family: "poppins", sans-serif;
-    font-size: medium;
-    position: relative;
-    bottom: 10px;
+    font-size: 0.75rem;
+    color: #666;
 }
+
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-content {
+        padding: 40px 25px;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .box-content {
+        width: 100%;
+    }
+
+    .icon {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
 
 /* destinations */
 .bdy {
