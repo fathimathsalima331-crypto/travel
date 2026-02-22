@@ -9,6 +9,17 @@ body {
     color: white;
 
 }
+/* ===== GLOBAL SAFETY FIX ===== */
+
+body{
+overflow-x:hidden;
+font-family:Poppins, sans-serif;
+}
+
+img{
+max-width:100%;
+display:block;
+}
 
 .hero {
     background-image: url('self-portrait-forest-scaled.jpg');
@@ -18,9 +29,8 @@ body {
     position: relative;
     height: 100vh;
 }
-
-.hero:hover {
-    transform: scaleY(1.02);
+.hero:hover{
+transform: scale(1.02);
 }
 
 /* ================= NAVBAR ================= */
@@ -823,4 +833,433 @@ p {
     .contact-header p {
         font-size: 0.9rem;
     }
+}
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:bold;
+white-space:nowrap;
+}
+
+@media(max-width:768px){
+
+.nav{
+flex-direction:column;
+gap:10px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+/* ===== ABOUT PAGE ICON SECTION ALIGN ===== */
+
+.icon{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+
+gap:30px;
+
+margin:50px auto;
+padding:20px;
+max-width:1100px;
+}
+
+/* Individual icon cards */
+
+.icon-content{
+background:white;
+
+padding:18px 25px;
+
+border-radius:14px;
+
+text-align:center;
+
+min-width:120px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+transition:0.3s ease;
+}
+
+.icon-content:hover{
+transform:scale(1.08);
+}
+
+/* Icon images */
+
+.icon-content img{
+width:30px;
+height:30px;
+margin-bottom:8px;
+}
+
+/* ===== SOCIAL ICON CENTER ALIGN ===== */
+
+.logoo{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+
+margin-top:20px;
+}
+
+.logoo img{
+width:32px;
+height:32px;
+
+cursor:pointer;
+
+transition:0.3s ease;
+}
+
+.logoo img:hover{
+transform:scale(1.2) translateY(-3px);
+}
+
+/* ===== FEATURE BOXES CENTER ALIGN ===== */
+
+.box{
+display:flex;
+justify-content:center;
+align-items:stretch;
+flex-wrap:wrap;
+
+gap:25px;
+
+margin:60px auto;
+max-width:1100px;
+}
+
+/* Feature card */
+
+.box-content{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+width:240px;
+
+background:white;
+
+padding:25px;
+
+border-radius:16px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+transition:0.3s ease;
+}
+
+.box-content:hover{
+transform:translateY(-8px);
+}
+
+/* Feature icons */
+
+.box-content img{
+width:55px;
+height:55px;
+
+margin-bottom:12px;
+}
+
+/* Text inside cards */
+
+.box-content h2{
+margin-bottom:8px;
+}
+
+.box-content p{
+font-size:0.85rem;
+color:#666;
+line-height:1.5;
+}
+
+/* ===== STATS ICON SECTION ===== */
+
+.icon{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+
+gap:30px;
+
+margin:50px auto;
+max-width:900px;
+}
+
+/* Stat cards */
+
+.icon-content{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:white;
+
+padding:20px 30px;
+
+border-radius:14px;
+
+min-width:140px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+transition:0.3s ease;
+}
+
+.icon-content:hover{
+transform:scale(1.08);
+}
+
+/* Stat icons */
+
+.icon-content img{
+width:35px;
+height:35px;
+
+margin-bottom:10px;
+}
+
+/* ===== ABOUT CONTENT BOX PERFECT POSITION ===== */
+
+.about-content{
+margin:40px auto;
+
+position:relative;
+top:0;
+
+max-width:1000px;
+
+padding:60px;
+
+text-align:center;
+
+background:white;
+
+border-radius:24px;
+
+box-shadow:0 25px 60px rgba(0,0,0,0.2);
+}
+
+/* Remove extra top spacing from paragraphs */
+
+.about-content p{
+margin-top:10px;
+line-height:1.7;
+}
+
+/* ================= GLOBAL RESPONSIVE ================= */
+
+img{
+max-width:100%;
+height:auto;
+}
+
+body{
+overflow-x:hidden;
+}
+
+/* ================= NAVBAR RESPONSIVE ================= */
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+max-width:1200px;
+margin:auto;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+padding:15px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.logo{
+text-align:center;
+width:100%;
+}
+
+}
+
+/* ================= HERO SECTION ================= */
+
+.banner{
+text-align:center;
+padding:20px;
+}
+
+.banner h1{
+font-size:clamp(2rem,5vw,4rem);
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about-content{
+width:90%;
+max-width:1000px;
+
+margin:40px auto;
+
+padding:40px 25px;
+
+text-align:center;
+
+border-radius:20px;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* ================= FEATURE BOXES ================= */
+
+.box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:25px;
+
+padding:40px 10px;
+}
+
+.box-content{
+width:280px;
+padding:20px;
+
+text-align:center;
+
+border-radius:16px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ================= STATS ICONS ================= */
+
+.icon{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:20px;
+
+padding:30px 10px;
+}
+
+.icon-content{
+min-width:140px;
+
+padding:20px;
+
+text-align:center;
+
+border-radius:14px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ================= DESTINATIONS ================= */
+
+.image{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
+gap:30px;
+
+padding:40px 15px;
+}
+
+.image-content{
+width:280px;
+}
+
+/* ================= BLOG ================= */
+
+.blog-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
+gap:30px;
+
+padding:40px 15px;
+}
+
+.blog-card{
+width:320px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+padding:40px;
+}
+
+@media(max-width:900px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+
+/* ================= MOBILE SMALL DEVICES ================= */
+
+@media(max-width:480px){
+
+.banner h1{
+font-size:1.8rem;
+}
+
+.box-content,
+.blog-card,
+.image-content{
+width:95%;
+}
+
 }
